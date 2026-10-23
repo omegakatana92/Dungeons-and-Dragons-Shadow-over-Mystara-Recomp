@@ -23,7 +23,7 @@ include $(CR)/build.mk
 #
 # Never mix in a DLL from another project's build folder: an older libstdc++-6.dll gives
 # "The procedure entry point ... could not be located in the dynamic link library" when the program starts.
-DLLS ?= SDL3 zlib1 libstdc++-6 libgcc_s_seh-1 libwinpthread-1
+DLLS ?= SDL3 zlib1 libiconv-2 libstdc++-6 libgcc_s_seh-1 libwinpthread-1
 
 all: deps
 

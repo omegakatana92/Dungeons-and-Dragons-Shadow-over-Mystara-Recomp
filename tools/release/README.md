@@ -17,7 +17,7 @@ gh release create vX.Y.Z build/release/*.zip build/release/*.tar.gz build/releas
 | Script | Builds | What it holds |
 | --- | --- | --- |
 | `linux.sh` | `Dungeons-and-Dragons-Shadow-over-Mystara-linux-x86_64.tar.gz` and `.AppImage` | the two programs (SDL 3 linked in), a `README.md`, the licence and `licenses/` |
-| `windows.sh` | `Dungeons-and-Dragons-Shadow-over-Mystara-windows-x64.zip` | the two programs, the five DLLs they need, a `README.txt` and `licenses/` |
+| `windows.sh` | `Dungeons-and-Dragons-Shadow-over-Mystara-windows-x64.zip` | the two programs, the six DLLs they need, a `README.txt` and `licenses/` |
 | `sums.sh` | `SHA256SUMS.txt` | hashes every archive in `build/release/` (run by the others) |
 
 The archives hold **no** ROM set, no key, no BIOS and no game artwork: the player brings their own

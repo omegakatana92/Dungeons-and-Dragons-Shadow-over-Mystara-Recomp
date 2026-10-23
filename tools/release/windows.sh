@@ -31,7 +31,7 @@ rm -rf "$OUT/stage"
 mkdir -p "$STAGE/licenses"
 cp "$B/$GAME.exe" "$B/$GAME-launcher.exe" "$STAGE/"
 cp "$ROOT/tools/release/README-windows.txt" "$STAGE/README.txt"
-for dll in SDL3.dll zlib1.dll libgcc_s_seh-1.dll libstdc++-6.dll libwinpthread-1.dll; do
+for dll in SDL3.dll zlib1.dll libiconv-2.dll libgcc_s_seh-1.dll libstdc++-6.dll libwinpthread-1.dll; do
     cp "$MINGW/bin/$dll" "$STAGE/"
 done
 
@@ -42,7 +42,8 @@ cp "$ROOT/tools/release/licenses/"*.txt "$STAGE/licenses/"
 for pair in "$MINGW/share/licenses/gcc-libs/COPYING.RUNTIME:GCC-runtime.txt" \
             "$MINGW/share/licenses/gcc-libs/COPYING.LIB:GCC-runtime-library.txt" \
             "$MINGW/share/licenses/crt/COPYING.MinGW-w64-runtime.txt:MinGW-w64-runtime.txt" \
-            "$MINGW/share/licenses/winpthreads/COPYING:winpthreads.txt"; do
+            "$MINGW/share/licenses/winpthreads/COPYING:winpthreads.txt" \
+            "$MINGW/share/licenses/libiconv/COPYING.LIB:libiconv-LGPL-2.1.txt"; do
     src="${pair%:*}"; dst="${pair##*:}"
     [ -f "$src" ] && cp "$src" "$STAGE/licenses/$dst"
 done
@@ -50,7 +51,7 @@ done
 # The programs link against SDL3.dll, zlib1.dll and the MinGW-w64/GCC runtimes (and Windows' own
 # libraries); anything else here means the archive is missing a DLL.
 if objdump -p "$STAGE"/*.exe | grep -i 'DLL Name' \
-   | grep -viE 'SDL3|zlib1|libgcc_s_seh-1|libstdc\+\+-6|libwinpthread-1|KERNEL32|msvcrt|USER32|SHELL32|ADVAPI32|ole32|api-ms-|GDI32|IMM32|WINMM|VERSION|SETUPAPI|OLEAUT32|COMDLG32|WS2_32'; then
+   | grep -viE 'SDL3|zlib1|libiconv-2|libgcc_s_seh-1|libstdc\+\+-6|libwinpthread-1|KERNEL32|msvcrt|USER32|SHELL32|ADVAPI32|ole32|api-ms-|GDI32|IMM32|WINMM|VERSION|SETUPAPI|OLEAUT32|COMDLG32|WS2_32'; then
     echo "error: a program needs a DLL that is not in the archive" >&2
     exit 1
 fi

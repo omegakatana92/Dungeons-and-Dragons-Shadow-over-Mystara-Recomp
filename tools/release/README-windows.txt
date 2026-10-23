@@ -35,9 +35,10 @@ ddsom.exe                the game
 ddsom-launcher.exe       the launcher (keep it beside the game)
 SDL3.dll                 \
 zlib1.dll                 >  the runtime libraries the two programs need
-libgcc_s_seh-1.dll       /   (keep them all in this folder, beside the .exe files)
-libstdc++-6.dll         /
-libwinpthread-1.dll    /
+libiconv-2.dll           /   (keep them all in this folder, beside the .exe files)
+libgcc_s_seh-1.dll      /
+libstdc++-6.dll        /
+libwinpthread-1.dll   /
 licenses/                the licences of the port and of everything shipped with it
 
 Keep the .exe and .dll files together in one folder. Save states, settings and the board's

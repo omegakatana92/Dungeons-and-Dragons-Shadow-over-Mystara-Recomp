@@ -63,12 +63,15 @@ A release archive holds the two built programs, so it carries these as well:
 | --- | --- | --- |
 | **SDL 3** | zlib | linked into the Linux programs (static); `SDL3.dll` on Windows |
 | **zlib** | zlib | linked in; `zlib1.dll` on Windows |
+| **libiconv** | LGPL-2.1 | `SDL3.dll`'s character conversion on Windows; `libiconv-2.dll` |
 | **Dear ImGui** | MIT | the launcher (its interface) |
 | **Inter** | SIL OFL 1.1 | the launcher (the font, compiled in) |
 | **GCC / MinGW-w64 runtime** | GPL-3.0 with the GCC Runtime Library Exception | `libstdc++-6.dll`, `libgcc_s_seh-1.dll`, `libwinpthread-1.dll` on Windows |
 
 The full texts of SDL 3, zlib, Dear ImGui, the Inter font and the MinGW-w64/GCC runtimes sit in the
 `licenses/` folder of the Windows archive; the Linux archive carries this file and `LICENSE`.
+`libiconv` is LGPL-2.1; its text is in `licenses/libiconv-LGPL-2.1.txt`. It is a separate DLL beside
+the programs, so it can be replaced with another build of libiconv.
 
 ```
 SDL 3 — Copyright (C) 1997-2025 Sam Lantinga <slouken@libsdl.org> — zlib licence

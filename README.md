@@ -141,8 +141,8 @@ sit beside it. `--help` lists every option (`--headless`, `--frames`, `--movie`,
 `--dump-ram`, `--list-features`, `--cpu`, `--sound`, …).
 
 **On Windows the two programs need the MinGW runtime beside them** — `SDL3.dll`, `zlib1.dll`,
-`libstdc++-6.dll`, `libgcc_s_seh-1.dll`, `libwinpthread-1.dll`. `make` copies them into
-`build/ddsom/` (the `deps` target), so the folder can be double-clicked or run from any shell.
+`libiconv-2.dll`, `libstdc++-6.dll`, `libgcc_s_seh-1.dll`, `libwinpthread-1.dll`. `make` copies them
+into `build/ddsom/` (the `deps` target), so the folder can be double-clicked or run from any shell.
 Starting the programs from an **MSYS2 Mingw64** shell works as well, because that shell has
 `/mingw64/bin` on `PATH`.
 
