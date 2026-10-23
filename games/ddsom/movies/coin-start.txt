@@ -1,0 +1,6 @@
+# cps2recomp input movie: frame player1 player2 (pressed bits, hex)
+# One coin, then Start, for finding the credits and driving the game into a match.
+600 800 0
+630 0 0
+660 400 0
+700 0 0

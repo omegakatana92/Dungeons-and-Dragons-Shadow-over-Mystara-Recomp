@@ -1,0 +1,16 @@
+# cps2recomp input movie: frame player1 player2 (pressed bits, hex)
+# Start pressed now and then, for a run with credits held (free play).
+3000 400 0
+3050 0 0
+3500 400 0
+3550 0 0
+4000 400 0
+4050 0 0
+4500 400 0
+4550 0 0
+5000 400 0
+5050 0 0
+5500 400 0
+5550 0 0
+6000 400 0
+6050 0 0

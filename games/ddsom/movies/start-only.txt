@@ -1,0 +1,6 @@
+# cps2recomp input movie: frame player1 player2 (pressed bits, hex)
+# Start only: with credits held (free play) this starts a game.
+3800 400 0
+3850 0 0
+4200 400 0
+4250 0 0
